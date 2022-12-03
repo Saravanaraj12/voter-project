@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @RestControllerAdvice
 public class GlobalHandler {
 	@ExceptionHandler(AgeNotValid.class)
-	public ResponseEntity<String> handler(AgeNotValid ag){
-		return new ResponseEntity<String>(ag.getMsg(),ag.getCode());
+	public ResponseEntity<Object> handler(AgeNotValid ag){
+		return new ResponseEntity<object>(ag.getMsg(),ag.getCode());
 	}
 
 }
